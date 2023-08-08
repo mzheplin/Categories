@@ -1,5 +1,6 @@
 ﻿using System;
-namespace Graps
+namespace Categories
+
 {
     public class Vertex
     {

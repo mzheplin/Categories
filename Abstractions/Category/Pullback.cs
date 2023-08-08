@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Text;
 
-namespace Graps.Category
+namespace Categories
 {
-    public class Product<T>
+    public class Pullback<T>
     {
-        private readonly T product_;
+        private readonly T pullback_;
         private readonly Homomorphism<T> hom1_;
         private readonly Homomorphism<T> hom2_;
 
-        public T product => product_;
+        public T pullback => pullback_;
         public Homomorphism<T> hom1 => hom1_;
         public Homomorphism<T> hom2 => hom2_;
-
-        public Product(T obj, Homomorphism<T> hom1, Homomorphism<T> hom2)
+        public Pullback(T obj, Homomorphism<T> hom1, Homomorphism<T> hom2)
         {
-            product_ = obj;
+            pullback_ = obj;
             hom1_ = hom1;
             hom2_ = hom2;
         }
@@ -24,8 +23,8 @@ namespace Graps.Category
         public override string ToString()
         {
             StringBuilder builder = new StringBuilder();
-            builder.AppendLine("product:");
-            builder.AppendLine(product_.ToString());
+            builder.AppendLine("pullback:");
+            builder.AppendLine(pullback_.ToString());
             builder.AppendLine("homomorphism to first object:");
             builder.AppendLine(hom1.ToString());
             builder.AppendLine("homomorphism to second object:");

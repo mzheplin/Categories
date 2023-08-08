@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Graps
+namespace Categories
 {
 
     public abstract class Graph<T> where T : Edge

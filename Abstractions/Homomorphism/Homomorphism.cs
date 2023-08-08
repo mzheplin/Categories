@@ -1,4 +1,5 @@
-﻿namespace Graps
+﻿namespace Categories
+
 {
     public abstract class Homomorphism<T>
     {

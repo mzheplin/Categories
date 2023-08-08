@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Graps.Category;
 
-namespace Graps
+namespace Categories
 {
     public class DLGCategory : ICategory<DLGraph>  //directed labeled graph category
     {

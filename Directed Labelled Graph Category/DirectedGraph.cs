@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Graps
+namespace Categories
 {
     public class DLGraph : Graph<DEdge> //directed labeled graph
     {

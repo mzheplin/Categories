@@ -8,11 +8,13 @@
   <ItemGroup>
     <None Remove="Directed Graph\" />
     <None Remove="Abstractions\" />
-    <None Remove="Category\" />
+    <None Remove="Abstractions\Category\" />
+    <None Remove="Abstractions\Homomorphism\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Directed Graph\" />
+    <Folder Include="Directed  Labelled Graph Category\" />
     <Folder Include="Abstractions\" />
-    <Folder Include="Category\" />
+    <Folder Include="Abstractions\Category\" />
+    <Folder Include="Abstractions\Homomorphism\" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Graps.Category
+namespace Categories
 {
     public interface ICategory<T> 
     {
