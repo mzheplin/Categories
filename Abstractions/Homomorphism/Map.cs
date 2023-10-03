@@ -1,7 +1,7 @@
 ﻿namespace Categories
 
 {
-    public abstract class Homomorphism<T>
+    public abstract class Map<T>
     {
         protected T source_;
         protected T target_;

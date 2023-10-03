@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Categories
 {
-    public class DLGHomomorphism : Homomorphism<DLGraph>
+    public class DLGHomomorphism : Map<DLGraph>
     {
         private readonly Dictionary<Vertex, Vertex> vertex_map_;
         private readonly Dictionary<string, string> edge_labeles_map_;

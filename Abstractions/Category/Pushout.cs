@@ -6,14 +6,14 @@ namespace Categories
     public class Pushout<T>
     {
         private readonly T pushout_;
-        private readonly Homomorphism<T> hom1_;
-        private readonly Homomorphism<T> hom2_;
+        private readonly Map<T> hom1_;
+        private readonly Map<T> hom2_;
 
         public T pushout => pushout_;
-        public Homomorphism<T> hom1=> hom1_;
-        public Homomorphism<T> hom2=> hom2_;
+        public Map<T> hom1=> hom1_;
+        public Map<T> hom2=> hom2_;
 
-        public Pushout(T obj, Homomorphism<T> hom1, Homomorphism<T> hom2)
+        public Pushout(T obj, Map<T> hom1, Map<T> hom2)
         {
             pushout_ = obj;
             hom1_ = hom1;
@@ -25,9 +25,9 @@ namespace Categories
             StringBuilder builder = new StringBuilder();
             builder.AppendLine("pushout:");
             builder.AppendLine(pushout_.ToString());
-            builder.AppendLine("homomorphism from first object:");
+            builder.AppendLine("Map from first object:");
             builder.AppendLine(hom1.ToString());
-            builder.AppendLine("homomorphism from second object:");
+            builder.AppendLine("Map from second object:");
             builder.AppendLine(hom2.ToString());
             return builder.ToString();
         }

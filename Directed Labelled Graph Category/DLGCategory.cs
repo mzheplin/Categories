@@ -101,7 +101,7 @@ namespace Categories
             return new Product<DLGraph>(product, hom1, hom2);
         }
 
-        public Pullback<DLGraph> GetPullback(Homomorphism<DLGraph> h1, Homomorphism<DLGraph> h2)
+        public Pullback<DLGraph> GetPullback(Map<DLGraph> h1, Map<DLGraph> h2)
         {
             if (h1.Target != h2.Target) return null;
 
@@ -154,7 +154,7 @@ namespace Categories
             return new Pullback<DLGraph>(pullback, hom1, hom2);
         }
 
-        public Pushout<DLGraph> GetPushout(Homomorphism<DLGraph> h1, Homomorphism<DLGraph> h2)
+        public Pushout<DLGraph> GetPushout(Map<DLGraph> h1, Map<DLGraph> h2)
         {
             if (h1.Source != h2.Source) return null;
 
@@ -221,8 +221,8 @@ namespace Categories
 
 
 
-        private void Glue(Homomorphism<DLGraph> h1,
-            Homomorphism<DLGraph> h2,
+        private void Glue(Map<DLGraph> h1,
+            Map<DLGraph> h2,
             ref Dictionary<Vertex, Vertex> vMap1,
             ref Dictionary<Vertex, Vertex> vMap2,
             ref Dictionary<string, string> eMap1,

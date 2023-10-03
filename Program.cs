@@ -258,29 +258,33 @@ namespace Categories
             //product of g2 and g3
             var product = dLGCategory.GetProduct(g2, g3);
 
-            System.Console.WriteLine("product of g2 and g3:");
-            System.Console.WriteLine(product.ToString());
+           // System.Console.WriteLine("product of g2 and g3:");
+           // System.Console.WriteLine(product.ToString());
 
 
             //coproduct of g2 and g3
-            var coproduct = dLGCategory.GetCoproduct(g2, g3);
+            var coproduct = dLGCategory.GetCoproduct(g2, g2);
+
+           // System.Console.WriteLine("coproduct of g2 and g3:");
+           // System.Console.WriteLine(coproduct.ToString());
+
+            var cop1 = dLGCategory.GetCoproduct(g2, coproduct.coproduct);
 
             System.Console.WriteLine("coproduct of g2 and g3:");
-            System.Console.WriteLine(coproduct.ToString());
-
+            System.Console.WriteLine(cop1.ToString());
             //pushout of g2 and g3
 
             var pushout = dLGCategory.GetPushout(g1_g2,g1_g3);
 
-            System.Console.WriteLine("pushout of g2 and g3:");
-            System.Console.WriteLine(pushout.ToString());
+           // System.Console.WriteLine("pushout of g2 and g3:");
+           // System.Console.WriteLine(pushout.ToString());
 
             //pullback of g2 and g3
 
             var pullback = dLGCategory.GetPullback(g2_g4, g3_g4);
 
-            System.Console.WriteLine("pullback of g2 and g3:");
-            System.Console.WriteLine(pullback.ToString());
+           // System.Console.WriteLine("pullback of g2 and g3:");
+            //System.Console.WriteLine(pullback.ToString());
 
 
 

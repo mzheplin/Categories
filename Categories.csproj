@@ -12,7 +12,6 @@
     <None Remove="Abstractions\Homomorphism\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Directed  Labelled Graph Category\" />
     <Folder Include="Abstractions\" />
     <Folder Include="Abstractions\Category\" />
     <Folder Include="Abstractions\Homomorphism\" />
