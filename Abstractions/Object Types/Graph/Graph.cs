@@ -62,14 +62,15 @@ namespace Categories
             return true;
         }
 
-        public static bool operator ==(Graph<T> edge1, Graph<T> edge2)
+        public static bool operator ==(Graph<T> graph1, Graph<T> graph2)
         {
-            return edge1.Equals(edge2);
+            if (graph1 is null) return graph2 is null;
+            return graph1.Equals(graph2);
         }
 
-        public static bool operator !=(Graph<T> edge1, Graph<T> edge2)
+        public static bool operator !=(Graph<T> graph1, Graph<T> graph2)
         {
-            return !edge1.Equals(edge2);
+            return !(graph1==graph2);
         }
 
         public override bool Equals(object obj)

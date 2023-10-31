@@ -10,10 +10,14 @@
     <None Remove="Abstractions\" />
     <None Remove="Abstractions\Category\" />
     <None Remove="Abstractions\Homomorphism\" />
+    <None Remove="Concrete Categories\" />
+    <None Remove="Concrete Categories\Directed Labelled Graph Category\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
     <Folder Include="Abstractions\Category\" />
-    <Folder Include="Abstractions\Homomorphism\" />
+    <Folder Include="Abstractions\Map\" />
+    <Folder Include="Concrete Categories\" />
+    <Folder Include="Concrete Categories\Directed Labelled Graph Category\" />
   </ItemGroup>
 </Project>

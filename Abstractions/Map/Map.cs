@@ -17,5 +17,12 @@
         {
             return IsInjective() && IsSurjective();
         }
+
+        protected abstract Map<T> Composite(Map<T> map);
+
+        public static Map<T> operator *(Map<T> m1, Map<T> m2)
+        {
+            return m1.Composite(m2);
+        }
     }
 }

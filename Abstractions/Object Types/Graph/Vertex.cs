@@ -4,8 +4,12 @@ namespace Categories
 {
     public class Vertex
     {
-        private readonly string label_;
-        public string Label => label_;
+        private string label_;
+        public string Label
+        {
+            get => label_;
+            set => label_ = value;
+        }
 
         public Vertex(string label)
         {
@@ -14,12 +18,13 @@ namespace Categories
 
         public static bool operator ==(Vertex vertex1, Vertex vertex2)
         {
-            return vertex1.Label == vertex2.Label;
+            if (vertex1 is null) return vertex2 is null;
+            return vertex1.Equals(vertex2);
         }
 
         public static bool operator !=(Vertex vertex1, Vertex vertex2)
         {
-            return vertex1.Label != vertex2.Label;
+            return !(vertex1 == vertex2);
         }
 
         public override bool Equals(object obj)

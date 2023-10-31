@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Categories
 {
-    public class DLGraph : Graph<DEdge> //directed labeled graph
+    public class DLMGraph : Graph<DEdge> //directed labeled multigraph
     {
-        public DLGraph() : base() { }
-        public DLGraph(List<DEdge> edges) : base(edges) { }
-        public DLGraph(List<DEdge> edges, List<Vertex> vertices) : base(edges, vertices) { }
+        public DLMGraph() : base() { }
+        public DLMGraph(List<DEdge> edges) : base(edges) { }
+        public DLMGraph(List<DEdge> edges, List<Vertex> vertices) : base(edges, vertices) { }
 
         public override string ToString()
         {
