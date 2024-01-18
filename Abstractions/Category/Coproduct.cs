@@ -16,10 +16,6 @@ namespace Categories
         public Coproduct(T obj, Map<T> hom1, Map<T> hom2)
         {
             coproduct_ = obj;
-          //  if(!hom1_.Source.Equals(hom2_.Source))
-          //  {
-            //    throw new ArgumentException();
-           // }
             hom1_ = hom1;
             hom2_ = hom2;
         }
@@ -28,9 +24,9 @@ namespace Categories
             StringBuilder builder = new StringBuilder();
             builder.AppendLine("coproduct:");
             builder.AppendLine(coproduct.ToString());
-            builder.AppendLine("Map from first object:");
+            builder.AppendLine("Map from the first object:");
             builder.AppendLine(hom1.ToString());
-            builder.AppendLine("Map from second object:");
+            builder.AppendLine("Map from the second object:");
             builder.AppendLine(hom2.ToString());
             return builder.ToString();
         }
