@@ -26,12 +26,12 @@ namespace Categories
 
         }
 
-        public Graph(List<T> edges, List<Vertex> vertices)
+        public Graph(List<T> edges, List<Vertex> vertices) //should I add vertices edges contain?
         {
             edges_ = edges.Distinct().ToList();
             vertices_ = vertices.Distinct().ToList();
         }
-
+         
         public void Add(Vertex vertex)
         {
             if (!vertices_.Contains(vertex))

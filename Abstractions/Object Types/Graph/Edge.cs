@@ -6,9 +6,9 @@ namespace Categories
 
     public abstract class Edge
     {
-        private readonly Vertex tail_;
-        private readonly Vertex head_;
-        private string label_;
+        protected readonly Vertex tail_;
+        protected readonly Vertex head_;
+        protected string label_;
 
         public Vertex Tail => tail_;
         public Vertex Head => head_;

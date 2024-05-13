@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +12,7 @@
     <None Remove="Abstractions\Homomorphism\" />
     <None Remove="Concrete Categories\" />
     <None Remove="Concrete Categories\Directed Labelled Graph Category\" />
+    <None Remove="Examples\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Abstractions\" />
@@ -19,5 +20,6 @@
     <Folder Include="Abstractions\Map\" />
     <Folder Include="Concrete Categories\" />
     <Folder Include="Concrete Categories\Directed Labelled Graph Category\" />
+    <Folder Include="Examples\" />
   </ItemGroup>
 </Project>

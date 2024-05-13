@@ -4,7 +4,7 @@ namespace Categories
 {
     public class Vertex
     {
-        private string label_;
+        protected string label_;
         public string Label
         {
             get => label_;
