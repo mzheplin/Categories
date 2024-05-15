@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
@@ -65,8 +64,7 @@ namespace Categories
                     return false;
             }
             return true;
-        }
-
+        } 
 
         private static bool CheckEdgeLabelesHomomorphism(
            DLMGraph graph1,
@@ -85,14 +83,17 @@ namespace Categories
             return true;
         }
 
-        public override bool IsSurjective()
+        public override bool IsSurjective() //it checks whether it is vertex surjective only
         {
-            throw new NotImplementedException();
+            var vertices = vertex_map_.Values.ToList();
+            return vertices == target_.Vertices; 
         }
 
-        public override bool IsInjective()
+        public override bool IsInjective()//it checks whether it is vertex injective only
         {
-            throw new NotImplementedException();
+            var unique = vertex_map_.Values.Distinct().Count();
+            var all = vertex_map_.Values.Count();
+            return unique == all;
         }
 
         public override string ToString()

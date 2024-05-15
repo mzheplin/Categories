@@ -42,7 +42,7 @@ namespace Categories
 
             foreach (var v in t1.Vertices)
             {
-                var newVertex = new Vertex($"{v.Label} - 0");
+                var newVertex = new Vertex(v.Label, "0");
                 copruduct.Add(newVertex);
                 vMap1.Add(v, newVertex);
             };
@@ -52,7 +52,7 @@ namespace Categories
                 var newEdge = new DEdge(
                    vMap1[e.Tail],
                    vMap1[e.Head],
-                   $"{e.Label} - 0");
+                   e.Label,"0");
                 copruduct.Add(newEdge);
                 if (!eMap1.ContainsKey(e.Label))
                     eMap1.Add(e.Label, newEdge.Label);
@@ -60,7 +60,7 @@ namespace Categories
 
             foreach (var v in t2.Vertices)
             {
-                var newVertex = new Vertex($"{v.Label} - 1");
+                var newVertex = new Vertex(v.Label,"1");
                 copruduct.Add(newVertex);
                 vMap2.Add(v, newVertex);
             };
@@ -70,7 +70,7 @@ namespace Categories
                 var newEdge = new DEdge(
                     vMap2[e.Tail],
                     vMap2[e.Head],
-                    $"{e.Label} - 1");
+                    e.Label,"1");
                 copruduct.Add(newEdge);
                 if (!eMap2.ContainsKey(e.Label))
                     eMap2.Add(e.Label, newEdge.Label);
@@ -143,7 +143,7 @@ namespace Categories
                     if (((DLMGHomomorphism)h1).Vertex_Map[v] ==
                        ((DLMGHomomorphism)h2).Vertex_Map[w])
                     {
-                        var newVertex = new Vertex($"{v.Label} - {w.Label}");
+                        var newVertex = new Vertex(v.Label, w.Label);
                         pullback.Add(newVertex);
                         vMap1.Add(newVertex, v);
                         vMap2.Add(newVertex, w);
@@ -159,9 +159,9 @@ namespace Categories
                        ((DLMGHomomorphism)h2).Edge_Map[h])
                     {
                         var newEdge = new DEdge(
-                        new Vertex($"{e.Tail.Label} - {h.Tail.Label}"),
-                        new Vertex($"{e.Head.Label} - {h.Head.Label}"),
-                        $"{e.Label} - {h.Label}"
+                        new Vertex(e.Tail.Label, h.Tail.Label),
+                        new Vertex(e.Head.Label, h.Head.Label),
+                        e.Label, h.Label
                         );
                         pullback.Add(newEdge);
                         if (!eMap1.ContainsKey(newEdge.Label))
@@ -317,34 +317,6 @@ namespace Categories
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

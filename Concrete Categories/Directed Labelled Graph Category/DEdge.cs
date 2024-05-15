@@ -6,6 +6,7 @@ namespace Categories
     public class DEdge : Edge
     {
         public DEdge(Vertex tail, Vertex head, string label = "") : base(tail, head, label) { }
+        public DEdge(Vertex tail, Vertex head, string left, string right): base(tail, head, left, right) { }
 
         public static bool operator ==(DEdge edge1, DEdge edge2)
         {
