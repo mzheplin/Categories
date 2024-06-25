@@ -30,7 +30,6 @@ namespace Categories.Examples
              };
 
             DLMGraph actionGraph = new DLMGraph(Actionedges);
-            Console.WriteLine(actionGraph);
             //affordance graph
             Vertex context = new Vertex("a, b, delete");
             Vertex emptyContext = new Vertex(" ");

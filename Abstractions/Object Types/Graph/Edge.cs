@@ -13,8 +13,8 @@ namespace Categories
         protected string right_;
 
 
-        public Vertex Tail => tail_;
-        public Vertex Head => head_;
+        public Vertex Tail => tail_; 
+        public Vertex Head => head_; 
         public string Label
         {
             get => label_;
